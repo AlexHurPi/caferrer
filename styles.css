@@ -1,0 +1,484 @@
+/*------------ ESTILOS GENERALES ------------*/
+        :root {
+            --color-principal: #82AB34; /* Azul oscuro */
+            --color-secundario: #714c2f; /* Verde menta suave */
+            --texto-oscuro: #333;
+            --blanco: #ffffff;
+            --link: blueviolet;
+        }        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'playwrite';
+        }
+        body {
+            line-height: 1.6;
+            color: var(--texto-oscuro);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+        html {
+            /* Esto hace que el scroll sea suave */
+            scroll-behavior: smooth;
+            
+            /* AJUSTA ESTE VALOR: Debe ser igual (o un poco más) 
+            a la altura de tu header. 
+            Si tu header mide 80px, pon 80px o 100px */
+            scroll-padding-top: 140px;
+        }
+
+/*--------- ENCABEZADO (HEADER) -----------*/
+        header {
+            background-image: linear-gradient(to right, #301c0e, #53341d, #714c2f);
+            background-size: cover;   /* Cubre todo el header */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat;           
+            color: var(--blanco);
+            padding: 1rem;
+            text-align: center;
+            position: sticky; /* Se queda fijo arriba al bajar */
+            top: 0;
+            z-index: 100;                  
+        }
+        .header-container{
+            display: flex;
+            flex-direction: row;
+            align-items: center;/* Centra verticalmente */
+            justify-content: center;/* Centra horizontalmente en la pantalla */
+            gap: 0.3rem; /* Espacio entre el logo y el texto */
+        }
+        .logo{
+            display: flex;
+            justify-content: left; /* Centra horizontalmente */
+            height: 6.5rem;  
+            width: 10.5rem; /* Mantiene la proporción original del logo */ 
+        }
+
+        /* Este contenedor alinea la imagen y el texto horizontalmente */
+        .header-title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;     /* Centra verticalmente */
+            justify-content: center; /* Centra horizontalmente en la pantalla */
+            gap: 0.1rem;               /* Espacio entre el logo y el texto */
+            margin-bottom: 1rem;     /* Espacio antes del menú */            
+        }
+        .header-title h2 {
+           font-size: 1.7rem;
+           
+            /* Degradado de Blanco sólido a Transparente (o gris claro) */
+            background: linear-gradient(to bottom, #82AB34 30%, rgba(255, 255, 255, 0.2));
+            
+            /* Recorta el fondo con la forma del texto */
+            -webkit-background-clip: text;
+            background-clip: text;
+            
+            /* Hace el texto transparente para mostrar el degradado */
+            color: transparent;
+            
+            /* Mantenemos una sombra para que se lea bien aunque se difumine */
+            filter: drop-shadow(0px 8px 2px rgba(0, 0, 0, 0.8));
+        }        
+
+        /* Controla el tamaño del logo para que no se vea gigante */
+        
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+            padding-bottom: 10px; /* Un poco de aire abajo */
+        }
+
+        nav a {
+            background-color: #82AB34;
+            background: linear-gradient(to bottom, #82AB34 30%, rgba(5, 207, 15, 0.2));
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            padding: 5px 10px; /* Aumenta el área de toque del dedo */
+            border-radius: 15px; /* Opcional: bordes suaves al pasar el dedo */
+        }
+        nav a:active {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        /* --- SECCIONES COMUNES --- */
+        section {            
+            padding: 3rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--color-principal);
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            text-align: left;
+            color: #666;
+            margin-block: 1rem;
+            font-style: italic;
+        }
+        .section-text {
+            text-align: justify;
+            color: var(--texto-oscuro);
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+
+        /* --- PORTADA (HERO) --- */
+        .hero {
+            /* --- TUS ESTILOS DE FONDO (Se mantienen igual) --- */
+            background-image: url('images/BannerH.png');
+            color: var(--color-principal);
+            background-size: contain;      
+            background-position: center; 
+            background-repeat: no-repeat;            
+            /* --- AJUSTES DE TAMAÑO --- */            
+            min-height: 40vh; /* Ocupa al menos el 80% de la altura de la pantalla */      
+        }
+
+        .hero-Text h3 {  
+            font-size: 1.8rem;            
+            color: black;
+             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+             text-align: center;
+        }
+
+        .section-negocio p {
+            text-align: justify;
+            font-size: 1.1rem;
+            color: var(--texto-oscuro);
+            margin-top: 1rem;
+        }
+
+        .btn {
+            /* --- POSICIONAMIENTO FIJO (ESTO ES LO QUE NECESITAS) --- */
+            position: fixed;  /* Fija el elemento a la ventana del navegador */
+            bottom: 20px;     /* Separación desde abajo */
+            right: 20px;      /* Separación desde la derecha */
+            z-index: 1000;    /* Asegura que flote POR ENCIMA de todo lo demás */
+
+            /* --- ESTILO VISUAL (Tus estilos anteriores) --- */
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #66E23C;
+            color: var(--blanco);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra importante para que resalte sobre el fondo */
+            
+            /* Eliminamos margin-top porque en 'fixed' no sirve de mucho */
+            /* margin-top: 1rem; */ 
+        }
+        .btn2 {   
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--color-principal);
+            background: linear-gradient(to bottom, var(--color-principal) 30%, rgba(5, 207, 15, 0.2));
+            color: var(--blanco);
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra importante para que resalte sobre el fondo */
+            
+            /* Eliminamos margin-top porque en 'fixed' no sirve de mucho */
+            /* margin-top: 1rem; */ 
+        }
+
+        .btn:hover {
+            background-color: var(--link);
+            transform: scale(1.05); /* Crece un 5% al pasar el mouse */
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3); /* La sombra crece */
+        }
+        /* Estilos para el icono SVG */
+        .btn-icon {
+            width: 24px;  /* Aumenté un poco el tamaño para que respire mejor */
+            height: 24px;
+            fill: currentColor; /* Esto hace que el icono tome el color del texto (blanco) */
+        } 
+
+/* --- CARACTERISTICAS DEL NEGOCIO --- */
+        .texto-resaltado {
+            /* Fondo café oscuro sólido para máximo contraste con el texto blanco */
+            background-color: #3e2723; 
+            color: #fff;
+            
+            /* Borde lateral verde para dar el toque de "naturaleza" sin ensuciar el fondo */
+            border-left: 5px solid #66E23C; 
+            
+            /* Espaciado y forma */
+            padding: 15px 20px;
+            border-radius: 8px; /* Bordes ligeramente redondeados, no tanto */
+            margin-top: 1rem;
+            
+            /* Sombra suave para dar efecto de tarjeta flotante */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            
+            /* Tipografía */
+            text-align: justify;
+            font-weight: normal; /* Quitamos negrita para que se lea más limpio */
+            line-height: 1.5; /* Separamos un poco las líneas */
+        }
+
+        /* --- SECCIÓN DE VIDEO --- */
+        .section-video {
+            background-color: #fff; /* Fondo limpio */
+            text-align: center;
+        }
+
+        .video-container {
+            /* CAMBIO CLAVE: Reduje el ancho máximo.
+            400px o 500px es ideal para un video vertical (tipo TikTok/Reel) en PC.
+            Si el video es horizontal (tipo YouTube), usa 600px o 700px. */
+            max-width: 450px;      
+           
+            margin: 0 auto;        
+            padding: 10px;
+            background: #000;      
+            border-radius: 15px;    
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            overflow: hidden;      
+        }
+
+
+        video {
+            width: 100%;            /* Se adapta al ancho del contenedor */
+            height: auto;           /* ¡IMPORTANTE! 'auto' calcula la altura según el video original */
+            display: block;        
+            border-radius: 10px;    
+        }
+
+
+        /* Ajuste para celulares */
+        @media (max-width: 768px) {
+            .video-container {
+                /* En celular queremos que aproveche más espacio */
+                max-width: 90%;
+            }
+        }
+        .wapp-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-contacto img {
+            height: 25px; /* Ajusta este valor según el tamaño real de tu icono de WhatsApp */
+        }
+        .wapp-numbers {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        /* --- CARRUSEL LATERAL (galería de productos) --- */
+        .gallery-container {
+            /* Habilita el scroll horizontal */
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding-bottom: 20px;
+           
+            /* Efecto imán para que las fotos se centren solas */
+            scroll-snap-type: x mandatory;
+           
+            /* Oculta la barra de scroll fea en algunos navegadores */
+            scrollbar-width: thin;
+        }        
+
+        .gallery-item {           
+            flex: 0 0 80%;
+            scroll-snap-align: center;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+           
+            /* --- LO NUEVO: TRUCO PARA CENTRAR TODO PERFECTAMENTE --- */
+            display: flex;             /* Activa el modo flexible */
+            flex-direction: column;    /* Ordena los elementos uno debajo de otro (columna) */
+                   /* ESTO es lo que centra la imagen horizontalmente */
+            justify-content: center;   /* Esto ayuda a centrar verticalmente si sobra espacio */
+                  /* Mantiene el texto centrado por si acaso */
+        }
+        .gallery-item h3 {
+            text-align: center; 
+            color: blue;
+        }
+        .gallery-item p{            
+            text-align: left;            
+        }
+
+        .gallery-item span{ /* Estilo para el texto de mensaje promocional de cada producto */
+            margin-top: 10px;
+            color: blueviolet;
+            font-size: small;
+        }
+
+        /* Ajuste para pantallas grandes (PC) */
+        @media (min-width: 768px) {
+            .gallery-item {
+                flex: 0 0 30%; /* En PC caben 3 a la vez */
+            }
+        }
+
+
+        
+        /* --- CONTACTO / FOOTER --- */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        /* --- Mapa de Google --- */
+        .mapa{
+        display: flex;  
+        justify-content: center;  
+        align-items: center;
+        margin-top: 1em;    
+        margin-bottom: 1em;
+        box-shadow: 2px 0vw 10px 10px rgba(0, 0, 0, .5);
+        }  
+        .mapa iframe {
+            width: 100%;       /* Ocupa todo el ancho disponible */
+            max-width: 600px;  /* Pero no más de 600px en PC */
+            height: 300px;     /* Una altura fija para que no se vea aplastado */
+            border-radius: 10px; /* Bordes redondeados para que combine con el diseño */
+        }
+
+
+        /* --- REDES SOCIALES (FOOTER) --- */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;            /* Espacio entre iconos */
+            margin-bottom: 20px;  /* Espacio antes del copyright */
+        }
+
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;          /* Tamaño del círculo/area clickeable */
+            height: 40px;
+            transition: transform 0.3s ease; /* Animación suave al pasar mouse */
+        }
+
+
+        .social-links svg {
+            width: 100%;
+            height: 100%;
+            fill: #ffffff;        /* Color blanco para fondo oscuro */
+            transition: fill 0.3s ease;
+        }
+
+
+        /* Efecto Hover: Se levantan un poco y cambian de color */
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+
+
+        .social-links a:hover svg {
+            fill: var(--color-secundario); /* Cambian al color menta al pasar el mouse */
+        }
+/* --- ESTILOS PARA PHOTOSWIPE --- */        
+        /* Asegura que el enlace no tenga estilos raros */
+        .pswp-link {
+            display: block;
+            cursor: zoom-in;
+        }
+        .pswp-link img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        /* Estilos para el título dentro de PhotoSwipe */
+        .pswp-caption-content {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 20px;
+            width: auto;
+            max-width: 90%;
+            pointer-events: none;
+        }
+        /* Forzar flechas de PhotoSwipe a los bordes de la PANTALLA */
+        .pswp__button--arrow--prev {
+            left: 20px !important; /* Pegado a la izquierda de la pantalla */
+            right: auto !important;
+        }
+
+
+        .pswp__button--arrow--next {
+            right: 20px !important; /* Pegado a la derecha de la pantalla */
+            left: auto !important;
+        }
+
+        /* Opcional: Asegurar que estén centradas verticalmente */
+        .pswp__button--arrow--prev,
+        .pswp__button--arrow--next {
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            margin-top: 0 !important;
+            position: fixed !important; /* Importante para que sea relativo a la ventana */
+        }
+        /* Forzar la "X" de cerrar a la esquina de la pantalla */
+        .pswp__button--close {
+            position: fixed !important; /* Relativo a la ventana */
+            top: 15px !important;       /* Separación desde arriba */
+            right: 20px !important;     /* Separación desde la derecha */
+            margin: 0 !important;       /* Quitar márgenes raros */
+            z-index: 10500 !important;  /* Asegurar que esté encima de todo */
+           
+            /* Opcional: Hacerla un poquito más grande/visible  */
+            background-color: rgba(0, 0, 0, 0.3) !important; /* Fondo oscurito suave */
+            border-radius: 50%; /* Redonda */
+        }
+/* --- DEFINICIÓN DE LA ANIMACIÓN RESPLANDOR DE LUZ EN TEXTO--- */
+@keyframes latido-luz {
+    0% {
+        background-color: #66E23C; /* Verde original */
+        box-shadow: 0 0 0 rgba(102, 226, 60, 0);
+    }
+    50% {
+        background-color: #f04dff; /* Un verde un poquito más claro */
+        box-shadow: 0 0 10px rgba(226, 60, 215, 0.7); /* Resplandor exterior */
+    }
+    100% {
+        background-color: #66E23C; /* Vuelve al original */
+        box-shadow: 0 0 0 rgba(102, 226, 60, 0);
+    }
+}
+
+
+    /* End of styles.css */
