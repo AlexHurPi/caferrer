@@ -49,12 +49,15 @@
             justify-content: center;/* Centra horizontalmente en la pantalla */
             gap: 0.3rem; /* Espacio entre el logo y el texto */
         }
-        .logo{
+        .logo{            
             display: flex;
             justify-content: left; /* Centra horizontalmente */
             height: 6.5rem;  
             width: 10.5rem; /* Mantiene la proporción original del logo */ 
-            
+            margin-right: 0.5rem;                     
+        }
+        .header-logo {            
+            border-radius: 8px;
         }
 
         /* Este contenedor alinea la imagen y el texto horizontalmente */
