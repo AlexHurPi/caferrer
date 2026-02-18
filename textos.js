@@ -1,21 +1,15 @@
 /*Este script es para guardar los mensajes e inyectarlos donde se necesiten dentro del HTML */
 const mensaje1 = `
-<p>En Caferrer comercializamos café 100% colombiano de la
-variedad Castillo, disponible tostado en grano y molido,
-cuidadosamente seleccionado para ofrecer una
-experiencia superior en cada taza.
-Estandarizamos nuestros procesos de producción para
-garantizar consistencia, trazabilidad y excelencia
-sensorial. Nuestro café es lavado, cultivado bajo un
-microclima privilegiado que aporta características únicas
-en aroma, acidez y cuerpo. Gracias a la aplicación de
-Buenas Prácticas Agrícolas (BPA), aseguramos un
-producto sostenible, responsable y de alta calidad.
-En Caferrer cumplimos con los estándares más exigentes
-de calidad y cuidado del medio ambiente, lo que nos
-permite ofrecer un café de especialidad con perfil
-exportable, ideal para mercados internacionales que
-valoran autenticidad, origen y excelencia
+<p>En Caferrer comercializamos café 100% colombiano, disponible tostado en grano, molido y verde,
+ cuidadosamente seleccionado para ofrecer una experiencia superior en cada taza.
+  Estandarizamos nuestros procesos de producción para garantizar consistencia, 
+  trazabilidad y excelencia sensorial. Nuestro café es lavado, cultivado bajo un microclima
+   privilegiado que aporta características únicas en aroma, acidez y cuerpo. Gracias a la
+    aplicación de Buenas Prácticas Agrícolas (BPA), aseguramos un producto sostenible, 
+    responsable y de alta calidad. En Caferrer cumplimos con los estándares más exigentes de 
+    calidad y cuidado del medio ambiente, lo que nos permite ofrecer un café de especialidad con
+     perfil exportable, ideal para mercados internacionales que valoran autenticidad, origen y
+      excelencia.
 </p>
 `;
 const mensaje2 = `<p>Caferrer es una marca de café colombiano de especialidad que honra las raíces, la tierra y las manos que lo cultivan. Su propósito va más allá del sabor: busca preservar la tradición cafetera, dignificar al productor y ofrecer una experiencia que conecte con la esencia del país.
