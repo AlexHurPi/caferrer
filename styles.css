@@ -20,7 +20,7 @@
         img {
             max-width: 100%;
             display: block;
-            border-radius: 8px;
+            
         }
         html {
             /* Esto hace que el scroll sea suave */
@@ -54,6 +54,7 @@
             justify-content: left; /* Centra horizontalmente */
             height: 6.5rem;  
             width: 10.5rem; /* Mantiene la proporción original del logo */ 
+            
         }
 
         /* Este contenedor alinea la imagen y el texto horizontalmente */
@@ -69,7 +70,7 @@
            font-size: 1.7rem;
            
             /* Degradado de Blanco sólido a Transparente (o gris claro) */
-            background: linear-gradient(to bottom, #82AB34 30%, rgba(255, 255, 255, 0.2));
+            background: linear-gradient(to bottom, white 30%, rgba(255, 255, 255, 0.2));
             
             /* Recorta el fondo con la forma del texto */
             -webkit-background-clip: text;
@@ -80,11 +81,28 @@
             
             /* Mantenemos una sombra para que se lea bien aunque se difumine */
             filter: drop-shadow(0px 8px 2px rgba(0, 0, 0, 0.8));
-        }        
+        }     
+        .header-bandera  {
+            margin-top: 0.3rem;
+            height: 2rem; /* Mantiene la proporción original */
+            width: 3rem; /* Ajusta este valor según el tamaño real de tu bandera */            
+        } 
 
-        /* Controla el tamaño del logo para que no se vea gigante */
-        
-        
+       .header-imagen {
+            max-width: 100%;
+            height: auto;
+            
+            /* Sombra suave difusa hacia abajo */
+            box-shadow: 0 4px 8px rgba(63, 63, 63, 0.359), 
+                        0 6px 20px rgba(34, 34, 34, 0.914);
+                        
+            /* Opcional: bordes redondeados ayudan al efecto 3D */
+            border-radius: 8px; 
+        }
+
+
+
+
         nav ul {
             list-style: none;
             display: flex;
