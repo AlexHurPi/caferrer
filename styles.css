@@ -29,15 +29,12 @@
             /* AJUSTA ESTE VALOR: Debe ser igual (o un poco más) 
             a la altura de tu header. 
             Si tu header mide 80px, pon 80px o 100px */
-            scroll-padding-top: 140px;
+            scroll-padding-top: 200px;
         }
 
 /*--------- ENCABEZADO (HEADER) -----------*/
         header {
-            background-image: linear-gradient(to right, #301c0e, #53341d, #714c2f);
-            background-size: cover;   /* Cubre todo el header */
-            background-position: center; /* Centra la imagen */
-            background-repeat: no-repeat;           
+            background-image: linear-gradient(to right, #301c0e, #53341d, #714c2f);                   
             color: var(--blanco);
             padding: 1rem;
             text-align: center;
@@ -144,7 +141,7 @@
         /* --- PORTADA (HERO) --- */
         .hero {
             /* --- TUS ESTILOS DE FONDO (Se mantienen igual) --- */
-            background-image: url('images/BannerH.png');
+            background-image: url('images/Banners/BannerH.png');
             color: var(--color-principal);
             background-size: contain;      
             background-position: center; 
@@ -167,6 +164,14 @@
             margin-top: 1rem;
         }
 
+/*------------Seccion Link ----------- */
+        .section-link {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            justify-content: center;
+            align-items: center;
+        }
         .btn {
             /* --- POSICIONAMIENTO FIJO (ESTO ES LO QUE NECESITAS) --- */
             position: fixed;  /* Fija el elemento a la ventana del navegador */
@@ -343,12 +348,10 @@
                 flex: 0 0 30%; /* En PC caben 3 a la vez */
             }
         }
-
-
         
         /* --- CONTACTO / FOOTER --- */
         footer {
-            background-color: #222;
+            background-image: linear-gradient(to right, #301c0e, #53341d, #714c2f);
             color: #fff;
             text-align: center;
             padding: 2rem;
@@ -370,7 +373,6 @@
             border-radius: 10px; /* Bordes redondeados para que combine con el diseño */
         }
 
-
         /* --- REDES SOCIALES (FOOTER) --- */
         .social-links {
             display: flex;
@@ -379,14 +381,12 @@
             margin-bottom: 20px;  /* Espacio antes del copyright */
         }
 
-
         .social-links a {
             display: inline-block;
             width: 40px;          /* Tamaño del círculo/area clickeable */
             height: 40px;
             transition: transform 0.3s ease; /* Animación suave al pasar mouse */
         }
-
 
         .social-links svg {
             width: 100%;
@@ -395,12 +395,10 @@
             transition: fill 0.3s ease;
         }
 
-
         /* Efecto Hover: Se levantan un poco y cambian de color */
         .social-links a:hover {
             transform: translateY(-5px);
         }
-
 
         .social-links a:hover svg {
             fill: var(--color-secundario); /* Cambian al color menta al pasar el mouse */

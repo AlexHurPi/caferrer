@@ -1,65 +1,77 @@
- @font-face {
-    font-family: 'playwrite';
-    src: url('fonts/PlaywriteAT-Italic-VariableFont_wght.ttf') format('truetype');      
- }
- 
- /* --- VARIABLES Y RESET --- */
-        :root {
-            --primary-color: #2c3e50; /* Color oscuro para textos principales */
-            --accent-color: #d4a373;  /* Color de acento (ej. dorado/tierra) */
-            --bg-color: #fdfbf7;      /* Fondo crema muy suave, mejor que blanco puro */
-            --white: #ffffff;
-            --text-body: #555555;
-            --font-heading: 'Georgia', serif; /* Toque elegante para títulos */
-            --font-body: 'Arial', sans-serif; /* Lectura fácil */
-        }
-
+ :root {
+            --color-principal: #82AB34; /* Azul oscuro */
+            --color-secundario: #714c2f; /* Verde menta suave */
+            --texto-oscuro: #333;
+            --blanco: #ffffff;
+            --link: blueviolet;
+        }        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'playwrite';
         }
-
         body {
-            font-family: var(--font-body);
-            background-color: var(--bg-color);
-            color: var(--text-body);
-            line-height: 1.8; /* Importante para blogs: buena separación de líneas */
+            line-height: 1.6;
+            color: var(--texto-oscuro);
         }
 
         img {
             max-width: 100%;
-            height: auto;
             display: block;
+            border-radius: 8px;
+        }
+        html {
+            /* Esto hace que el scroll sea suave */
+            scroll-behavior: smooth;
+            
+            /* AJUSTA ESTE VALOR: Debe ser igual (o un poco más) 
+            a la altura de tu header. 
+            Si tu header mide 80px, pon 80px o 100px */
+            scroll-padding-top: 200px;
         }
 
-        /* --- ENCABEZADO (HEADER) --- */
+/*--------- ENCABEZADO (HEADER) -----------*/
         header {
-           /* Color de respaldo por si el navegador no carga el degradado */
-            background-color: #4b134f;
-            /* Orden: Púrpura Profundo -> Violeta Vibrante -> Rojo Oscuro */
-            background-image: linear-gradient(to right, white, gray, black);
+            background-image: linear-gradient(to right, #301c0e, #53341d, #714c2f);
+            background-size: cover;   /* Cubre todo el header */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat;           
             color: var(--blanco);
             padding: 1rem;
             text-align: center;
             position: sticky; /* Se queda fijo arriba al bajar */
             top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);            
+            z-index: 100;                  
         }
-        /* Este contenedor alinea la imagen y el texto horizontalmente */
-        .header-logo {
+        .header-container{
             display: flex;
+            flex-direction: row;
+            align-items: center;/* Centra verticalmente */
+            justify-content: center;/* Centra horizontalmente en la pantalla */
+            gap: 0.3rem; /* Espacio entre el logo y el texto */
+        }
+        .logo{
+            display: flex;
+            justify-content: left; /* Centra horizontalmente */
+            height: 6.5rem;  
+            width: 10.5rem; /* Mantiene la proporción original del logo */ 
+        }
+
+        /* Este contenedor alinea la imagen y el texto horizontalmente */
+        .header-title {
+            display: flex;
+            flex-direction: column;
             align-items: center;     /* Centra verticalmente */
             justify-content: center; /* Centra horizontalmente en la pantalla */
-            gap: 15px;               /* Espacio entre el logo y el texto */
-            margin-bottom: 1rem;     /* Espacio antes del menú */
+            gap: 0.1rem;               /* Espacio entre el logo y el texto */
+            margin-bottom: 1rem;     /* Espacio antes del menú */            
         }
-       .header-logo h2 {
+        .header-title h2 {
            font-size: 1.7rem;
-           padding-inline: 3px;
+           
             /* Degradado de Blanco sólido a Transparente (o gris claro) */
-            background: linear-gradient(to bottom, #ffffff 30%, rgba(255, 255, 255, 0.2));
+            background: linear-gradient(to bottom, #82AB34 30%, rgba(255, 255, 255, 0.2));
             
             /* Recorta el fondo con la forma del texto */
             -webkit-background-clip: text;
@@ -70,16 +82,11 @@
             
             /* Mantenemos una sombra para que se lea bien aunque se difumine */
             filter: drop-shadow(0px 8px 2px rgba(0, 0, 0, 0.8));
-        }
+        }        
+
         /* Controla el tamaño del logo para que no se vea gigante */
-        .logo-img {
-            height: 50px; /* Ajusta este valor según el tamaño real de tu logo */
-            width: auto;  /* Mantiene la proporción para no deformarlo */
-        }
-        /* Opcional: Quitar el margen del h2 para que quede bien alineado */
-        .header-logo h2 {
-            margin: 0;
-        }
+        
+        
         nav ul {
             list-style: none;
             display: flex;
@@ -91,173 +98,57 @@
         }
 
         nav a {
-            color: var(--white);
+            background-color: #82AB34;
+            background: linear-gradient(to bottom, #82AB34 30%, rgba(5, 207, 15, 0.2));
+            color: var(--blanco);
             text-decoration: none;
             font-weight: bold;
             font-size: 0.9rem;
             padding: 5px 10px; /* Aumenta el área de toque del dedo */
-            border-radius: 4px; /* Opcional: bordes suaves al pasar el dedo */
+            border-radius: 15px; /* Opcional: bordes suaves al pasar el dedo */
         }
         nav a:active {
             background-color: rgba(255,255,255,0.2);
         }
-        
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-            letter-spacing: 1px;
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
         }
-
-        /* --- HERO SECTION --- */
-        .page-header {            
-            padding: 4rem 1rem;        
-            color: var(--text-body);            
-        }     
-
-        .page-header h1 {
-            text-align: center;
-            font-family: var(--font-heading);
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .page-header p {
-            text-align: justify;
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-            padding-inline: 0.5rem;
-        }
-
-        .logo {
-            display: flex;            
-            justify-content: center;            
-            padding: 2rem;
-        }
-        .logo img {
-            height: 20rem;
-            width: auto;
-        }
-
-        /* --- CONTENEDOR PRINCIPAL --- */
-        .container {
-            max-width: 1000px; /* Ancho máximo para que no se desparrame en pantallas grandes */
-            margin: 0 auto;            
-        }
-
-        /* --- SECCIÓN HISTORIA (IMAGEN + TEXTO) --- */
-        .story-section {                    
-            color: var(--text-body);   
-            margin-bottom: 1.5rem;         
-        }        
-
-        .story-text h1 {
-            text-align: center;
-            font-family: var(--font-heading);
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            padding-inline: 1rem;
-        }
-
-        .story-text p {
-            text-align: justify;
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
-            padding-inline: 1rem;
-        }
-
-
-        /* --- SECCIÓN DE VALORES (3 COLUMNAS) --- */
-        .values-section {
-            background-color: var(--white);
-            padding: 4rem 2rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            margin-bottom: 5rem;
-            text-align: center;
-        }
-
-        .values-section h2 {
-            font-family: var(--font-heading);
-            color: var(--primary-color);
-            margin-bottom: 3rem;
-        }
-
-        .values-section p {
-            text-align: justify;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .value-card {
-            padding: 1.5rem;
-        }
-
-        .value-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--accent-color);
-        }
-
-        .value-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        /* --- SECCIÓN PERSONAL (AUTOR) --- */
-        .author-bio {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 5rem auto;
-            border-top: 1px solid #ddd;
-            padding-top: 3rem;
-            padding-inline: 1rem;
-        }
-        .author-bio p {
-            text-align: justify;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        .author-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 1.5rem auto;
-            border: 4px solid var(--white);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .signature {
-            font-family: 'Brush Script MT', cursive;
-            font-size: 1.8rem;
-            color: var(--accent-color);
-            margin-top: 1rem;
-        }
-
-        /* --- MEDIA QUERIES (RESPONSIVE) --- */
-        @media (max-width: 768px) {
-            .story-section {
-                flex-direction: column; /* Apila imagen y texto en vertical */
-            }
+        .logo-header {
             
-            .story-image img {
-                box-shadow: 5px 5px 0px var(--accent-color); /* Sombra más pequeña */
-            }
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */            
+        }
+/*-----------ESTILO PARA TEXTO DE LAS SECCIONES-----------------*/      
+        .section-title {
+            text-align: center;
+            color: var(--color-principal);
+            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+        }  
 
-            .page-header h1 {
-                font-size: 2rem;
-            }
+        .section-subtitle {
+            text-align: left;
+            color: #666;
+            margin-block: 1rem;
+            font-style: italic;
+        }
+        .section-text {
+            text-align: justify;
+            color: var(--texto-oscuro);
+            font-size: 1.1rem;            
+            max-width: 800px; /* Ancho máximo para mejorar la legibilidad */
+            margin: 0 auto; /* Centra el texto horizontalmente */         
+        }
+        /*-----------SECCIONES-----------------*/
+        .sections{
+            padding: 1rem;
+        }
+        .imagenes{
+            display: flex;
+            flex-direction: column;            
+            max-width: 800px; /* Ancho máximo para mejorar la legibilidad */
+            align-items: center; /* Centra verticalmente */             
+            margin: 0 auto; /* Centra el texto horizontalmente */             
+            gap: 2rem;             
         }

@@ -44,6 +44,7 @@ const mensaje7 = `<p>
         La cafeína contribuye a una mayor
         sensación de alerta y concentración.
     </p>`;     
+   
 document.getElementById('mensaje1').innerHTML = mensaje1;
 document.getElementById('mensaje2').innerHTML = mensaje2;
 document.getElementById('mensaje3').innerHTML = mensaje3;
