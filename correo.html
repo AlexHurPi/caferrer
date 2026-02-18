@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!-- Esta línea es CRUCIAL para que sea responsiva en celulares -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <link rel="stylesheet" href="styles-mail.css">
+    <title>E-mail</title>    
+</head>
+<body>
+    <section class="contact-section" id="contacto">
+        <div class="form-container">
+            <h2>Contáctanos</h2>
+            
+            <!-- IMPORTANTE: Reemplaza la URL en 'action' con la tuya de Formspree -->
+            <form action="https://formspree.io/f/xykdpyve" method="POST">
+                
+                <!-- Nombre -->
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre Completo</label>
+                    <input type="text" id="nombre" name="name" class="form-input" placeholder="Tu nombre" required>
+                </div>
+
+                <!-- Correo (Type email valida que tenga @) -->
+                <div class="form-group">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="form-group">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea id="mensaje" name="message" class="form-textarea" placeholder="¿En qué podemos ayudarte?" required></textarea>
+                </div>
+
+                <!-- Botón -->
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+
+        </div>
+    </section>
+
+</body>
+</html>

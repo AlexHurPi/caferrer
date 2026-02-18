@@ -1,0 +1,80 @@
+/* --- ESTILOS DEL FORMULARIO --- */
+        .contact-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .form-container {
+            max-width: 600px; /* Ancho máximo para PC */
+            margin: 0 auto;   /* Centrado automático */
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra elegante */
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-input, 
+        .form-textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box; /* Evita que el padding rompa el ancho */
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus, 
+        .form-textarea:focus {
+            border-color: #d4a373; /* Color de acento al escribir */
+            outline: none;
+        }
+
+        .form-textarea {
+            height: 150px;
+            resize: vertical; /* Permite estirar solo hacia abajo */
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: #d4a373; /* Tu color de marca */
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #c08b5c; /* Un poco más oscuro al pasar el mouse */
+        }
+
+        /* Responsive: Ajustes para pantallas muy pequeñas */
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 20px;
+            }
+        }
+    
