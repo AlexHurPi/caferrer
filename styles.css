@@ -207,9 +207,10 @@
         }
         .catalogo-image {
             width: 100%;
-            max-width: 600px;
+            /*max-width: 600px;*/
             border-radius: 10px;            
-            
+            box-shadow: 0 4px 8px rgba(63, 63, 63, 0.359), 
+                        0 6px 20px rgba(34, 34, 34, 0.914);
         }
         .section-link {            
             padding: 2rem 1.5rem;
