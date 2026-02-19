@@ -57,7 +57,7 @@
             display: block;
             width: 100%;
             padding: 14px;
-            background-color: #d4a373; /* Tu color de marca */
+            background-color: #82AB34; /* Tu color de marca */
             color: white;
             border: none;
             border-radius: 6px;
@@ -68,7 +68,7 @@
         }
 
         .btn-submit:hover {
-            background-color: #c08b5c; /* Un poco más oscuro al pasar el mouse */
+            background-color: green; /* Un poco más oscuro al pasar el mouse */
         }
 
         /* Responsive: Ajustes para pantallas muy pequeñas */

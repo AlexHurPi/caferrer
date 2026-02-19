@@ -207,7 +207,7 @@
         }
         .catalogo-image {
             width: 100%;
-            /*max-width: 600px;*/
+            /*max-width: 600px; esta linea no permitia ver la imagen ya que al inicio se establecio el max-width en 1200*/
             border-radius: 10px;            
             box-shadow: 0 4px 8px rgba(63, 63, 63, 0.359), 
                         0 6px 20px rgba(34, 34, 34, 0.914);
