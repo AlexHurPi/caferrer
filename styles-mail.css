@@ -77,4 +77,29 @@
                 padding: 20px;
             }
         }
+
+        /* Estilo base del mensaje de error (oculto) */
+        .error-msg {
+            display: none;
+            color: #dc3545; /* Rojo de alerta */
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        /* CONDICIÓN 1: Si el input es inválido (no tiene formato email) */
+        /* CONDICIÓN 2: Y NO está mostrando el placeholder (significa que el usuario ya escribió algo) */
+        .form-input:invalid:not(:placeholder-shown) {
+            border-color: #dc3545; /* Borde rojo */
+        }
+
+        /* Muestra el mensaje de error bajo las mismas condiciones */
+        .form-input:invalid:not(:placeholder-shown) + .error-msg {
+            display: block;
+        }
+
+        /* Opcional: Borde verde cuando sea válido */
+        .form-input:valid {
+            border-color: #28a745;
+        }
+
     

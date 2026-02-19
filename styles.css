@@ -200,13 +200,25 @@
         }
 
 /*------------Seccion Link ----------- */
-        .section-link {
+        .section-catalogo {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 1rem;
             justify-content: center;
             align-items: center;
         }
+        .catalogo-image {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;            
+            box-shadow: 0 4px 8px rgba(63, 63, 63, 0.359), 
+                        0 6px 20px rgba(34, 34, 34, 0.914);
+        }
+        .section-link {            
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+
         .btn {
             /* --- POSICIONAMIENTO FIJO (ESTO ES LO QUE NECESITAS) --- */
             position: fixed;  /* Fija el elemento a la ventana del navegador */
@@ -264,6 +276,8 @@
             background-color: #f9f9f9; /* Fondo claro para destacar el botón */
             text-align: center;
         }
+
+        .section
 
 /* --- CARACTERISTICAS DEL NEGOCIO --- */
         .texto-resaltado {
