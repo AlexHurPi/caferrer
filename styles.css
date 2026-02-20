@@ -252,8 +252,7 @@
             text-decoration: none;
             border-radius: 15px;
             font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra importante para que resalte sobre el fondo */
-            
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra importante para que resalte sobre el fondo */            
             /* Eliminamos margin-top porque en 'fixed' no sirve de mucho */
             /* margin-top: 1rem; */ 
         }
@@ -528,100 +527,117 @@
     }
 }
 
-/*----------ESTILOS DE SELECCION DE IDIOMA-----------*/
-.language-selector-section {
-    background-color: #f8f9fa; /* Gris muy suave */
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 1px solid #e0e0e0;
-}
+/*---------------------------ESTILOS DE SELECCION DE IDIOMA----------------------------------*/
+        .language-selector-section {
+            background-color: #f8f9fa; /* Gris muy suave */
+            padding: 10px 5px;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .container{
+            
+        }
 
-.lang-title {
-    font-family: sans-serif;
-    color: #333;
-    font-size: 0.6rem;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
+        .lang-title {
+            font-family: sans-serif;
+            color: #333;
+            font-size: 0.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-.lang-title .divider {
-    color: #ccc;
-    margin: 0 10px;
-}
+        .lang-title .divider {
+            color: #ccc;
+            margin: 0 5px;
+        }
 
-/* Contenedor de las tarjetas */
-.lang-options {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap; /* Para que se adapte a móviles ESTA PROPIEDAD ES LA QUE PONE UNA TARJETA DEBAJO DE LA OTRA EN MOVILES*/
-}
+        /* Contenedor de las tarjetas */
+        .lang-options {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            /*flex-wrap: wrap; /* Para que se adapte a móviles ESTA PROPIEDAD ES LA QUE PONE UNA TARJETA DEBAJO DE LA OTRA EN MOVILES*/
+        }
 
-/* Diseño de cada tarjeta de idioma */
-.lang-card {
-    background: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 2px;
-    border: 2px solid transparent; /* Borde invisible por defecto */
-}
+        /* Diseño de cada tarjeta de idioma */
+        .lang-card {
+            background: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 50px;
+            border: 2px solid transparent; /* Borde invisible por defecto */
+        }
 
-/* Efecto Hover (al pasar el mouse) */
-.lang-card:hover {
-    transform: translateY(-5px); /* Se levanta un poco */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    border-color: #007bff; /* Color azul al pasar el mouse */
-}
+        /* Efecto Hover (al pasar el mouse) */
+        .lang-card:hover {
+            transform: translateY(-5px); /* Se levanta un poco */
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            border-color: #007bff; /* Color azul al pasar el mouse */
+        }
 
-/* Estilo para el idioma ACTIVO (el que estás viendo) */
-.lang-card.active {
-    border-color: #000; /* Borde negro fijo */
-    background-color: #fff;
-    cursor: default; /* Flecha normal, no manita */
-    pointer-events: none; /* Desactiva el clic */
-    opacity: 0.7; /* Un poco más apagado para indicar que "ya estás aquí" */
-}
+        /* Estilo para el idioma ACTIVO (el que estás viendo) */
+        .lang-card.active {
+            border-color: #000; /* Borde negro fijo */
+            background-color: #fff;
+            cursor: default; /* Flecha normal, no manita */
+            pointer-events: none; /* Desactiva el clic */
+            opacity: 0.7; /* Un poco más apagado para indicar que "ya estás aquí" */
+        }
 
-/* Icono de bandera */
-.flag-icon {
-    width: 30px; /* Ancho de la bandera */
-    height: 20px; /* Alto de la bandera */
-    background-size: cover; /* Asegura que la imagen cubra el contenedor */
-    margin-bottom: 10px;
-}
+        /* Icono de bandera */
+        .flag-icon {
+            width: 20px; /* Ancho de la bandera */
+            height: 10px; /* Alto de la bandera */
+            background-size: cover; /* Asegura que la imagen cubra el contenedor */
+            margin-bottom: 10px;
+        }
 
-/* Nombre del idioma */
-.lang-name {
-    font-size: 0.7rem;
-    font-weight: bold;
-    color: #333;
-}
+        /* Nombre del idioma */
+        .lang-name {
+            font-size: 0.6rem;
+            font-weight: bold;
+            color: #333;
+        }
 
-/* Código pequeño (ES/EN) */
-.lang-native {
-    font-size: 0.7rem;
-    color: #888;
-    margin-top: 5px;
-}
+        /* Código pequeño (ES/EN) */
+        .lang-native {
+            font-size: 0.7rem;
+            color: #888;
+            margin-top: 5px;
+        }
 
-/* Ajuste para móviles */
-@media (max-width: 600px) {
-    .lang-options {
-        flex-direction: column; /* Una debajo de otra en celular */
-        align-items: center;
-    }
-    .lang-card {
-        width: 100%; /* Ocupar todo el ancho disponible */
-        max-width: 300px;
-    }
-}
+        /* Ajuste para móviles */
+        @media (max-width: 600px) {
+            .lang-options {
+                flex-direction: row; /* Una debajo de otra en celular */
+                justify-content: flex-end; /* Alinea a la derecha para que no quede tan pegado al borde */
+                margin-right: 5px;
+            }
+            .lang-card {
+                width: 30%; /* Ocupar todo el ancho disponible */
+                max-width: 300px;
+            }
+            .lang-name {
+            font-size: 0.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+            /* Código pequeño (ES/EN) */
+            .lang-native {
+                font-size: 0.5rem;
+                color: #888;
+                margin-top: 5px;
+            }
+        }
 
-    /* End of styles.css */
+            /* End of styles.css */
