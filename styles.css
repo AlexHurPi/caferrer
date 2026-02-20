@@ -220,8 +220,8 @@
         .btn {
             /* --- POSICIONAMIENTO FIJO (ESTO ES LO QUE NECESITAS) --- */
             position: fixed;  /* Fija el elemento a la ventana del navegador */
-            bottom: 20px;     /* Separación desde abajo */
-            right: 20px;      /* Separación desde la derecha */
+            bottom: 5px;     /* Separación desde abajo */
+            right: 5px;      /* Separación desde la derecha */
             z-index: 1000;    /* Asegura que flote POR ENCIMA de todo lo demás */
 
             /* --- ESTILO VISUAL (Tus estilos anteriores) --- */
