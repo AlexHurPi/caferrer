@@ -233,7 +233,7 @@
             color: var(--blanco);
             padding: 10px 20px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 15px;
             font-weight: bold;
             box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* Sombra importante para que resalte sobre el fondo */
             
