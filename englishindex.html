@@ -79,7 +79,7 @@
     <section id="catalogo" class="section-catalogo">
         <h2 class="section-title">Our Catalog</h2>
         <h2 class="section-subtitle">Our complete product catalog.</h2>
-        <img src="/images/Productos/catalogo1.jpg" alt="catalogo-Caferrer" class="catalogo-image">
+        <div class="gallery-container" id="contenedorProductos"></div>    
     </section>
 
 <!--Seccion explicaion de negocio2-->  
@@ -125,10 +125,16 @@
     <!-- Footer: Contenedor llamado desde javascript -->
     <div id="footer-container"></div>
 
+<!-- Carga e Inicialización de PhotoSwipe + Plugin de Títulos -->    
+    <script type="module" src="photoswipe-init.js"></script>
+
 <!-- Script Textos -->    
     <script src="textos-ingles.js"></script> 
 
 <!-- Script para cargar el footer -->    
     <script src="script-ingles.js"></script>
+
+<!-- Script para cargar el catálogo de productos -->
+    <script src="scriptCatalogo-ingles.js"></script>
 </body>
 </html>
